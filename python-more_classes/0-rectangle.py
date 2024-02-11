@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+"""
+This script defines a basic Rectangle class
+"""
+
 
 class Rectangle:
     """
-    Thos class defines a basic rectangle.
+    This class defines a basic rectangle.
 
     Attributes:
     None
