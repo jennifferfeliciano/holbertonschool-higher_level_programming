@@ -99,3 +99,10 @@ class Rectangle(Base):
             "[Rectangle] ({}) {}/{} - {}/{}"
             .format(self.id, self.x, self.y, self.width, self.height)
             )
+
+    def update(self, *args):
+        """to update attributes with no-keyword arguments"""
+        if args:
+            attributes = ["id", "width", "height", "x", "y"]
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])
