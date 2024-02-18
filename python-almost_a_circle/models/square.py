@@ -27,7 +27,8 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """
-        Assigns attributes based on the arguments passed or the keyword arguments.
+        Assigns attributes based on the arguments
+        passed or the keyword arguments.
 
         Args:
         *args: List of non-keyworded arguments.
@@ -35,9 +36,8 @@ class Square(Rectangle):
         """
         if args:
             attributes = ["id", "size", "x", "y"]
-            for i, arg in enumerate(args):
-                if i < len(attributes):
-                    setattr(self, attributes[i], arg)
+            for attr, value in zip(attributes, args):
+                setattr(self, attr, value)
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
